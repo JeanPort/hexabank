@@ -17,6 +17,17 @@ public class ContaEntity {
     @Column(name = "saldo", nullable = false)
     private Double saldo;
 
+    public ContaEntity(Integer numConta, Integer agencia, String titular, Double saldo) {
+        this.numConta = numConta;
+        this.agencia = agencia;
+        this.titular = titular;
+        this.saldo = saldo;
+    }
+
+    public ContaEntity() {
+
+    }
+
     public Integer getNumConta() {
         return numConta;
     }

@@ -20,6 +20,17 @@ public class TransacaoEntity {
     @JoinColumn(name = "num_conta_destino")
     private ContaEntity contaDestino;
 
+    public TransacaoEntity(String numDoc, String naturesa, Double valor, ContaEntity contaOrigem, ContaEntity contaDestino) {
+        this.numDoc = numDoc;
+        this.naturesa = naturesa;
+        this.valor = valor;
+        this.contaOrigem = contaOrigem;
+        this.contaDestino = contaDestino;
+    }
+
+    public TransacaoEntity() {
+    }
+
     public String getNumDoc() {
         return numDoc;
     }
